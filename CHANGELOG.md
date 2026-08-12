@@ -38,3 +38,11 @@ docs: align Agent OS RFC and skill lifecycle
 feat(changelog): adopt centralized automation
 - **ci:** Update changelog reusable workflow pin
 - **ci:** Follow changelog workflow main
+- **deps:** Update actions/checkout action to v7.0.1
+
+
+### Maintenance(ci): follow changelog reusable workflow main
+
+- Merge pull request #4 from ignazio-ingenito/chore/update-changelog-workflow-pin
+
+chore(ci): follow changelog reusable workflow main
