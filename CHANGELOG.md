@@ -10,6 +10,12 @@ All notable changes to this project are documented in this file.
 - **changelog:** Adopt centralized automation
 
 
+### Bug fixes
+
+- **deps:** Assign GitHub Actions to Dependabot
+- **deps:** Configure Dependabot for GitHub Actions
+
+
 ### Documentation
 
 - Add README
@@ -38,7 +44,7 @@ docs: align Agent OS RFC and skill lifecycle
 feat(changelog): adopt centralized automation
 - **ci:** Update changelog reusable workflow pin
 - **ci:** Follow changelog workflow main
-- **deps:** Update actions/checkout action to v7.0.1
+- **deps:** Update actions/checkout action to v7.0.1 (#6)
 
 
 ### Maintenance(ci): follow changelog reusable workflow main
