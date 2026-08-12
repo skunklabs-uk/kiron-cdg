@@ -1,5 +1,12 @@
 {
   "extends": [
     "github>ignazio-ingenito/renovate-config"
+  ],
+  "packageRules": [
+    {
+      "matchManagers": ["github-actions"],
+      "matchDepTypes": ["action"],
+      "enabled": false
+    }
   ]
 }
