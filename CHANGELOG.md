@@ -12,8 +12,7 @@ All notable changes to this project are documented in this file.
 
 ### Bug fixes
 
-- **deps:** Assign GitHub Actions to Dependabot
-- **deps:** Configure Dependabot for GitHub Actions
+- **deps:** Make updater ownership exclusive (#7)
 
 
 ### Documentation
@@ -45,6 +44,7 @@ feat(changelog): adopt centralized automation
 - **ci:** Update changelog reusable workflow pin
 - **ci:** Follow changelog workflow main
 - **deps:** Update actions/checkout action to v7.0.1 (#6)
+- **deps:** Align Dependabot cooldown
 
 
 ### Maintenance(ci): follow changelog reusable workflow main
