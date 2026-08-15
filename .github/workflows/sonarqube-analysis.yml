@@ -25,6 +25,7 @@ on:
       - '**/*.ts'
       - '**/*.tsx'
       - '.github/workflows/sonarqube-analysis.yml'
+      - 'sonar-project.properties'
   workflow_dispatch:
 
 permissions:
@@ -59,12 +60,6 @@ jobs:
 
       - name: Run SonarQube analysis
         uses: SonarSource/sonarqube-scan-action@22918119ff8e1ca75a623e15c8296b6ea4fbe28f # v8.2.1
-        with:
-          args: >-
-            -Dsonar.projectKey=ignazio-ingenito_kiron-cdg
-            -Dsonar.projectName=kiron-cdg
-            -Dsonar.sources=.
-            -Dsonar.exclusions=docs/**,README.md,AGENTS.md
         env:
           SONAR_HOST_URL: ${{ env.SONARQUBE_SELF_HOSTED_URL }}
           SONAR_TOKEN: ${{ env.SONARQUBE_SELF_HOSTED_TOKEN }}
