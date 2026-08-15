@@ -24,6 +24,7 @@ on:
       - '**/*.sh'
       - '**/*.ts'
       - '**/*.tsx'
+      - '.github/workflows/sonarqube-analysis.yml'
   workflow_dispatch:
 
 permissions:
@@ -51,16 +52,10 @@ jobs:
           ref: ${{ github.sha }}
           fetch-depth: 0
 
-      - name: Validate SonarQube connection
+      - name: Install dirmngr for SonarScanner signature verification
         run: |
-          set -euo pipefail
-          test -n "${SONARQUBE_SELF_HOSTED_URL:-}"
-          test -n "${SONARQUBE_SELF_HOSTED_TOKEN:-}"
-          test -r "$SSL_CERT_FILE"
-          test -r /etc/sonarqube-trust/bundle.p12
-          curl --fail --silent --show-error --max-time 10 \
-            --cacert "$SSL_CERT_FILE" \
-            "$SONARQUBE_SELF_HOSTED_URL/api/system/status" >/dev/null
+          sudo apt-get update -qq
+          sudo apt-get install --yes --no-install-recommends dirmngr
 
       - name: Run SonarQube analysis
         uses: SonarSource/sonarqube-scan-action@22918119ff8e1ca75a623e15c8296b6ea4fbe28f # v8.2.1
