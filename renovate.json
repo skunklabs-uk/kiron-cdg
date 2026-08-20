@@ -1,6 +1,6 @@
 {
   "extends": [
-    "github>ignazio-ingenito/renovate-config"
+    "github>skunklabs-uk/renovate-config"
   ],
   "packageRules": [
     {

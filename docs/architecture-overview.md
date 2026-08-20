@@ -2,7 +2,7 @@
 
 **Stato:** Active  
 **Ambito:** architettura logica e responsabilità dei componenti  
-**Principio guida:** [RFC-0001](https://github.com/ignazio-ingenito/agent-os/blob/main/rfcs/RFC-0001-principles.md)
+**Principio guida:** [RFC-0001](https://github.com/skunklabs-uk/agent-os/blob/main/rfcs/RFC-0001-principles.md)
 
 ## Scopo
 
@@ -22,7 +22,7 @@ Il funzionamento del prodotto è descritto in [`product-overview.md`](product-ov
 - La risoluzione minima dei Timer è 5 minuti.
 - MariaDB è il punto di pubblicazione di Actual e Forecast.
 - BI Oracle accede direttamente ai dati pubblicati su MariaDB. Connessione, credenziali e rete verranno definite durante l'integrazione.
-- SQLMesh è il motore scelto per le trasformazioni e il governo delle elaborazioni. La compatibilità funzionale con MariaDB 10.6.22 è stata verificata nel PoC tracciato dalla [issue #1](https://github.com/ignazio-ingenito/kiron-cdg/issues/1).
+- SQLMesh è il motore scelto per le trasformazioni e il governo delle elaborazioni. La compatibilità funzionale con MariaDB 10.6.22 è stata verificata nel PoC tracciato dalla [issue #1](https://github.com/skunklabs-uk/kiron-cdg/issues/1).
 - Non verrà sviluppato un linguaggio proprietario per descrivere le formule.
 
 GoRules ZEN resta un candidato da validare quando saranno disponibili formule e ribaltamenti reali.
@@ -168,7 +168,7 @@ Gli stati iniziali sono `PENDING`, `RUNNING`, `COMPLETED` e `FAILED`. Altri stat
 
 ## Validazione SQLMesh su MariaDB
 
-Il PoC della [issue #1](https://github.com/ignazio-ingenito/kiron-cdg/issues/1) è stato eseguito con `mariadb:10.6.22` e `sqlmesh[mysql]` in Docker Compose, usando un Actual gestionale mensile coerente con il dominio Kiron.
+Il PoC della [issue #1](https://github.com/skunklabs-uk/kiron-cdg/issues/1) è stato eseguito con `mariadb:10.6.22` e `sqlmesh[mysql]` in Docker Compose, usando un Actual gestionale mensile coerente con il dominio Kiron.
 
 Sono stati verificati:
 
