@@ -37,3 +37,22 @@ Produce basi dati dedicate ad Actual e Forecast, utilizzate dalle dashboard dire
 - `ai-runs/`: risultati delle singole analisi.
 
 La documentazione originale sotto `docs/input/` non deve essere modificata.
+
+## Collegamento seriale al Developer Workspace
+
+L’adozione documentale di [Homelab #1265](https://github.com/skunklabs-uk/homelab/issues/1265)
+usa un consumer seriale e un checkout isolato, con repository e thread,
+branch, head e prompt vincolati all’incarico.
+
+Il child restituisce un report senza modificare file. Il coordinatore verifica
+il risultato e ne registra l’accettazione con RETURN. La proposta revisionata
+viene applicata separatamente su una normale PR discendente da main;
+lo snapshot senza parent non viene integrato.
+
+Questa nota non analizza il prodotto, i dati gestionali o contabili né la
+documentazione cliente. Non modifica gli originali o i risultati delle analisi.
+La preview HTTP non si applica all’incarico documentale e il report non attesta
+un’applicazione o un servizio esposto.
+
+Per il funzionamento del collegamento, consultare il [runbook Developer Workspace](https://github.com/skunklabs-uk/developer-workspace/blob/main/docs/WORKSPACE-HANDOFF.md)
+e il [README del deployment Homelab](https://github.com/skunklabs-uk/homelab/blob/main/gitops/apps/developer-workspace/README.md).
